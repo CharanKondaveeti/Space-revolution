@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #252525;
+
+}
+
+.sun--earth-Moon--mars {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-space-Revolution {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sun-container {
+    position: relative;
+}
+
+.sun {
+    width: 5rem;
+    height: 5rem;
+    background-color: #ffde00;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 1.5rem #ffde0080, 0 0 0 2.8rem #ffde0060, 0 0 0 4rem #ffde0040, 0 0 0.4rem 5rem #ffde0010;
+}
+
+.mars,
+.earth {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+
+    width: 15rem;
+    /* background-color: red; */
+
+    display: flex;
+
+    transform-origin: left center;
+
+    animation: revolve--earth 20s linear infinite;
+
+}
+
+.mars {
+    width: 22rem;
+    animation: revolve--mars 28s linear infinite;
+
+    /* position: relative; */
+}
+
+.earth img,
+.marsImg-moon {
+    margin-left: auto;
+    animation: rotation--earth 5s linear infinite;
+}
+
+.marsImg-moon {
+    position: relative;
+}
+
+.mars img,
+.earth img {
+    width: 3rem;
+    height: 3em;
+}
+
+.mars--moon--container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+
+    transform-origin: left center;
+
+    width: 3rem;
+
+    display: flex;
+
+    animation: revolve--marsMonn 8s linear infinite;
+
+}
+
+.marsMoon {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: white;
+
+    border-radius: 50%;
+
+    margin-left: auto;
+}
+
+@keyframes revolve--earth {
+    100% {
+        transform: translate(0, -50%) rotate(360deg);
+    }
+}
+
+@keyframes revolve--mars {
+    100% {
+        transform: translate(0, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotation--earth {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes revolve--marsMonn {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
